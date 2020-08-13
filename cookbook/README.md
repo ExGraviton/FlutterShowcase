@@ -2,8 +2,9 @@
 
 A showcase Cookbook made with Flutter using [MealDB] api.
 
-[![Download apk][icon]
-Download apk][download link]
+[![Download apk][icon]][download link]
+
+[Download apk][download link]
 
 ---
 
