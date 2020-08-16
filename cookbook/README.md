@@ -1,6 +1,6 @@
 # Cookbook
 
-A showcase Cookbook made with Flutter using [MealDB] api.
+A showcase Cookbook made with Flutter using [TheMealDB] API.
 
 [![Download apk][icon]][download link]
 
@@ -24,7 +24,7 @@ A showcase Cookbook made with Flutter using [MealDB] api.
 | ----- | ----- |
 
 
-[mealdb]: https://themealdb.com
+[themealdb]: https://themealdb.com
 [icon]: images/icon.webp
 [i1]: screenshots/1.jpg
 [i2]: screenshots/2.jpg
