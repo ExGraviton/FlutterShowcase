@@ -12,7 +12,6 @@ class CacheManager extends BaseCacheManager {
   })  : assert(key != null),
         assert(maxRetry >= 0),
         assert(retryDelay != null && retryDelay > Duration.zero),
-        _path = _tempDir.then((dir) => p.join(dir.path, key)),
         super(key, maxAgeCacheObject: maxAge, maxNrOfCacheObjects: maxCache);
 
   final String key;
@@ -20,9 +19,11 @@ class CacheManager extends BaseCacheManager {
   final Duration retryDelay;
 
   static final _tempDir = getTemporaryDirectory();
-  final Future<String> _path;
   @override
-  Future<String> getFilePath() => _path;
+  Future<String> getFilePath() async {
+    final tempDir = await _tempDir;
+    return p.join(tempDir.path, key);
+  }
 
   @override
   Future<FileInfo> downloadFile(url, {authHeaders, force = false}) async {
